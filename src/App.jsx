@@ -33,13 +33,13 @@ const App = () => {
     }
 
   return (
-    <div className='bg-black h-full text-black flex flex-col gap-8 p-10 max-md:h-[100vh]' >
-      <div className='flex items-center justify-center'><h1>FETCHING A FORM API FOR MY LOVE</h1></div>
+    <div className='bg-black h-full text-black flex flex-col gap-3 p-10 max-md:h-[100vh]' >
+      <div className='flex items-center justify-center text-white text-[20px]'><h1>💖 A Special Form for You 💖</h1></div>
       <form className='flex flex-col gap-5 items-center h-full w-full'>
         <input className='w-[20%] h-[40px] p-2 outline-none max-md:w-[80vw] rounded-xl' type="text" name='name'  placeholder='Enter Your Name ' value={name} onChange={(e) => setName(e.target.value)} />
         <input className='w-[20%] h-[40px] p-2 outline-none max-md:w-[80vw] rounded-xl' type="email" name='email' placeholder='Enter Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-        <textarea className='w-[20%] h-[150px] p-2 outline-none max-md:w-[80vw] rounded-xl' name="message" placeholder='Express your feelings tell me how much you love me' value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-        <button className='bg-[#FFFF00] px-5 py-2 font-bold rounded-2xl text-black' type='submit' onClick={fetchApi}>{loading ? 'sending...' : 'send'}</button>
+        <textarea className='w-[20%] h-[150px] p-2 outline-none max-md:w-[80vw] max-md:rounded-e-3xl rounded-xl' name="message" placeholder='Express your feelings tell me how much you love me' value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+        <button className='bg-[#FFFF00] px-5 py-2 font-bold rounded-2xl max-md:rounded-full text-black' type='submit' onClick={fetchApi}>{loading ? 'sending...' : 'send'}</button>
       </form>
       <ToastContainer />
     </div>
